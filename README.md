@@ -6,7 +6,8 @@ vanilla HTML, JavaScript
 
 ## React 시작 🫩
 
-````shell
+```shell
 npm create vite@latest .
 ```
-````
+
+### CounterApp 😱
