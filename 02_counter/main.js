@@ -17,7 +17,11 @@ const resultH1 = document.getElementById("result");
 //   resultH1.innerText = number;
 // };
 
-const plus = () => {
-  number++;
+const plus = (value = 1) => {
+  resultH1.innerText = number += value;
+};
+
+const reset = () => {
+  number = 0;
   resultH1.innerText = number;
 };
