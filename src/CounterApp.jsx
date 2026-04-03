@@ -5,6 +5,16 @@ function CounterApp() {
   // count: 현재 또는 이전 상태 값; setCount: 상태 값 변경 함수
   const [count, setCount] = useState(0);
 
+  function plusMax10() {
+    setCount((count) => {
+      if (count >= 10) {
+        return count;
+      } else {
+        return count + 1;
+      }
+    });
+  }
+
   return (
     <>
       <h1>{count}</h1>
@@ -12,6 +22,15 @@ function CounterApp() {
       <button onClick={() => setCount((count) => count + 2)}>+2</button>
       <button onClick={() => setCount((count) => count - 1)}>-</button>
       <button onClick={() => setCount(0)}>reset</button>
+      <button onClick={() => setCount((count) => Math.min(count + 1, 10))}>
+        + (max 10)
+      </button>
+      <button onClick={() => plusMax10(count)}>+ (max 10)</button>
+      <button
+        onClick={() => setCount((count) => (count < 10 ? count + 1 : count))}
+      >
+        + (max 10)
+      </button>
       {/* <button
         className="counter"
         onClick={() => setCount((count) => count + 1)}
