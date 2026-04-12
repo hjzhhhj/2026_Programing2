@@ -1,6 +1,6 @@
 import Button from "./Button.jsx";
 
-export default function TodoAdder() {
+export default function TodoAdder({ addTodo }) {
   return (
     <form className="todo__form">
       <input
