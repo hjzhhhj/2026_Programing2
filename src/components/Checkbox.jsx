@@ -1,4 +1,4 @@
-export default function Checkbox() {
+export default function Checkbox(props) {
   const { id, ...rest } = props;
   return (
     <>
@@ -6,7 +6,6 @@ export default function Checkbox() {
       <label htmlFor={`chk-${id}`} className="todo__label">
         think
       </label>
-      ;
     </>
   );
 }
