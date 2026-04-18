@@ -53,7 +53,7 @@
   font-size: 0.8rem;
   margin-left: 10px;
 }
-.todo__item--complete .todo__label {
+.todo__item--completed .todo__label {
   text-decoration: line-through;
   color: #999;
 }

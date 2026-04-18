@@ -1,4 +1,4 @@
-function TodoItemEmpty() {
+function TodoitemEmpty() {
   return (
     <li className="todo__item todo__item--empty">
       <p>할 일 없음.</p>
@@ -6,4 +6,4 @@ function TodoItemEmpty() {
   );
 }
 
-export default TodoItemEmpty;
+export default TodoitemEmpty;
