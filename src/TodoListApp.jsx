@@ -22,18 +22,16 @@ function TodoListApp() {
 
   const toggleTodo = (id) => {
     setTodos((todos) =>
-      //todos에서 하나씩 꺼내어 todo. todo의 id 와 id가 같다면, 기존 todo.isCompleted 값 수정. 아니면 그대로
       todos.map((todo) =>
-       todos.filter((todo) => todo.id !== id)
+        todo.id === id ? { ...todo, isCompleted: !todo.isCompleted } : todo,
+      ),
     );
   };
 
   const deleteTodo = (id) => {
-        //todos에서 하나씩 꺼낸 todo. id가 다르면, 복사하자
-        setTodos((todos) => 
-            todos.filter((todo) => todo.id !== id)
-        )
-    }
+    //todos에서 하나씩 꺼낸 todo. id가 다르면, 복사하자
+    setTodos((todos) => todos.filter((todo) => todo.id !== id));
+  };
 
   return (
     <div className="todo">
