@@ -21,7 +21,6 @@
   margin-right: 10px;
   flex: 1; /* display: flex 안의 아이템 중 여유 공간만큼 늘리자 */
 }
-
 .todo__input--edit {
   flex-grow: 1;
 }
