@@ -30,3 +30,6 @@ vanilla HTML, JavaScript
 - `{!조건식 && 거짓}`
 - LocalStorage, `useEffect()`
 ```
+
+- `style={{}}`
+- HomeApp : state 값을 변경하여 그에 맞는 컴포넌트를 표시하자
