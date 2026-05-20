@@ -46,3 +46,5 @@ vanilla HTML, JavaScript
 - ```javascript
   <Link to="/"></Link>
   ```
+
+- `useNavigate()`
