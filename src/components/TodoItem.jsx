@@ -51,7 +51,7 @@ export default function TodoItem({ todo, toggleTodo, deleteTodo, editTodo }) {
         className="todo__button todo__button--edit"
         onClick={handleEditClick}
       >
-        {isEditing ? "💾" : "🤺"}
+        {isEditing ? "💾" : "✏️"}
       </Button>
       <Button
         className="todo__button todo__button--delete"
