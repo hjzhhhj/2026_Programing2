@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./todolist.css";
 // import TodoItemEmpty from './components/TodoItemEmpty.jsx'
 // import Button from './components/Button.jsx'
@@ -16,7 +16,20 @@ class Todo {
   }
 }
 const TODOS_STORAGE_KEY = "todos";
+const BGM_SRC = "https://www.bensound.com/bensound-music/bensound-ukulele.mp3";
+
 function TodoListApp() {
+  const audioRef = useRef(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const toggleMusic = () => {
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setIsPlaying((prev) => !prev);
+  };
   //LocalStorage에 저장된 할 일 목록 불러오자
   //LocalStorage에 저장된게 있으면, todos 대입, 없으면 []
   const initTodos = () => {
@@ -53,7 +66,8 @@ function TodoListApp() {
 
   return (
     <div className="todo">
-      <TodoHeader />
+      <audio ref={audioRef} src={BGM_SRC} loop />
+      <TodoHeader isPlaying={isPlaying} toggleMusic={toggleMusic} />
       <TodoAdder addTodo={addTodo} />
       <TodoList
         todos={todos}

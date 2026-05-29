@@ -63,5 +63,21 @@
   color: #999;
 }
 
+.todo__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.todo__music-btn {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.todo__music-btn:hover {
+  transform: scale(1.2);
+}
+
 /* A > B: 바로 아래 자식
 A B: 전체 자식 중에 한 자식: 자손 */
